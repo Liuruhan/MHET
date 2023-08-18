@@ -39,7 +39,11 @@ pip install torchnet h5py prefetch_generator
 ## LMHT configuration
 Everything related to LMHT can be found in the LMHT directory. 
 #### Hyperparameter configuration 
-Hyperparameters for DETRtime are read via the command line. We provide a run and evaluation shell script to save the current run configuration. For a detailed list of possible hyperparameter adaptions check the argument parser in train_speed.py
+Hyperparameters for LMHT are read via the command line. For a detailed list of possible hyperparameter adaptions check the argument parser in train_speed.py
+#### Dataset preparation
+First, download the dataset from the public link: [sleep-edf](https://www.physionet.org/content/sleep-edfx/1.0.0/).
+Second, load the edf files for signals and labels
+Third, split edf files according to sleep epoch and epoch steps. For single epoch models, the input data is in size (batch, channel, steps, sample_rate * second), for example (4, 2, 1, 3000). For multiple epoch models, the input data is in size (batch, channel, steps, sample_rate * second), for example (4, 2, 128, 3000). 
 #### How to run the LMHT model 
 To run LMHT, first, execute 
 ```

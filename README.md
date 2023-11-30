@@ -1,7 +1,7 @@
-# LMHT
-Logic-guided multimodal hybrid embedding transformer for sleep staging
+# MHFNet
+A Multimodal Hybrid-embedding Fusion Network for Automatic Sleep Staging
 
-LMHT is a framework for automating sleep stage scoring, comprising a dual-path gate transformer (DGT) module to extract wave characteristics and encode attention patterns, a hybrid time-embedding (HTE) module to combine local and global temporal patterns, and a logic-related output header (LOH) to reconstruct temporal and logical information in accordance with the scoring standard. Compared to other sleep staging solutions, we use local and global time embedding to achieve higher  performance.
+MHFNet is a framework for automating sleep stage scoring, comprising multi-stream Xception blocks (MXBs) to extract wave characteristics, a hybrid time-embedding (HTE) module to combine local and global temporal patterns, a dual-path gate transformer (DGT) module to encode attention patterns, and a refined output header (ROH) to reconstruct temporal and logical information in accordance with the scoring standard. Compared to other sleep staging solutions, we use local and global time embedding to achieve higher  performance.
 
 ## Graphic Abstract
 ![image](figs/LMHT.png)

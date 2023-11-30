@@ -4,7 +4,7 @@ A Multimodal Hybrid-embedding Fusion Network for Automatic Sleep Staging
 MHFNet is a framework for automating sleep stage scoring, comprising multi-stream Xception blocks (MXBs) to extract wave characteristics, a hybrid time-embedding (HTE) module to combine local and global temporal patterns, a dual-path gate transformer (DGT) module to encode attention patterns, and a refined output header (ROH) to reconstruct temporal and logical information in accordance with the scoring standard. Compared to other sleep staging solutions, we use local and global time embedding to achieve higher  performance.
 
 ## Graphic Abstract
-![image](figs/LMHT.png)
+![image](figs/figure3.png)
 
 # Overview
 The repository contains general functionality for running the LMHT model and its accompanying Baseline architectures on all benchmarked datasets. The Baselines include state-of-the-art architectures like SalientSleepNet, UTime, InceptionTime, Xception, and others.

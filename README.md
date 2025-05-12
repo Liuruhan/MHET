@@ -7,7 +7,7 @@ MHFNet is a framework for automating sleep stage scoring, comprising multi-strea
 ![image](figs/figure3.png)
 
 # Overview
-The repository contains general functionality for running the LMHT model and its accompanying Baseline architectures on all benchmarked datasets. The Baselines include state-of-the-art architectures like SalientSleepNet, UTime, InceptionTime, Xception, and others.
+The repository contains general functionality for running the MHFN model and its accompanying Baseline architectures on all benchmarked datasets. The Baselines include state-of-the-art architectures like SalientSleepNet, UTime, InceptionTime, Xception, and others.
 
 The models can be benchmarked on the publicly available SleepEDF-SC and SleepEDF-ST datasets for sleep stage segmentation available here: [sleep-edf](https://www.physionet.org/content/sleep-edfx/1.0.0/).
 
@@ -36,8 +36,8 @@ conda install scikit-learn matplotlib
 pip install torchnet h5py prefetch_generator
 ```
 
-## LMHT configuration
-Everything related to LMHT can be found in the LMHT directory. 
+## MHFN configuration
+Everything related to MHFN can be found in the MHFN directory. 
 #### Hyperparameter configuration 
 Hyperparameters for LMHT are read via the command line. For a detailed list of possible hyperparameter adaptions check the argument parser in train_speed.py
 #### Dataset preparation
@@ -49,7 +49,7 @@ To run LMHT, first, execute
 ```
 python train_speed.py --args
 ```
-to obtain the saved LMHT model without the LOH module is in path model_result/lmhtCP_epochN.pth. 
+to obtain the saved MHFN model without the LOH module is in path model_result/lmhtCP_epochN.pth. 
 
 Second, run
  ```
@@ -105,20 +105,10 @@ If you use this code for your research, please cite our paper:
 
 - [1] [EEGNet: A Compact Convolutional Network for EEG-based Brain-Computer Interfaces](http://arxiv.org/abs/1611.08024)
 - [2] [DeepSleepNet: A Model for Automatic Sleep Stage Scoring Based on Raw Single-Channel EEG](https://ieeexplore.ieee.org/document/7961240)
-- [3] [TinySleepNet: An Efficient Deep Learning Model for Sleep Stage Scoring based on Raw Single-Channel EEG](https://doi.org/10.1109/EMBC44109.2020.9176741
-        
-        
-        
-        )
-- [4] [InceptionTime: Finding AlexNet for time series classification](https://doi.org/10.1007/s10618-020-00710-y
-        
-        
-        
-        )
+- [3] [TinySleepNet: An Efficient Deep Learning Model for Sleep Stage Scoring based on Raw Single-Channel EEG](https://doi.org/10.1109/EMBC44109.2020.9176741)
+- [4] [InceptionTime: Finding AlexNet for time series classification](https://doi.org/10.1007/s10618-020-00710-y)
 - [5] [U-Time: A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging](https://proceedings.neurips.cc/paper/2019/hash/57bafb2c2dfeefba931bb03a835b1fa9-Abstract.html)
 - [6] [SalientSleepNet: Multimodal Salient Wave Detection Network for Sleep Staging](https://doi.org/10.24963/ijcai.2021/360
         
-        
-        
-        )
+         
 - [7] [SeqSleepNet: End-to-End Hierarchical Recurrent Neural Network for Sequence-to-Sequence Automatic Sleep Staging](https://ieeexplore.ieee.org/document/8631195)

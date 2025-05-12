@@ -1,5 +1,5 @@
 # MHFNet
-A Multimodal Hybrid-embedding Fusion Network for Automatic Sleep Staging
+MHFNet: A Multimodal Hybrid-Embedding Fusion Network for Automatic Sleep Staging
 
 MHFNet is a framework for automating sleep stage scoring, comprising multi-stream Xception blocks (MXBs) to extract wave characteristics, a hybrid time-embedding (HTE) module to combine local and global temporal patterns, a dual-path gate transformer (DGT) module to encode attention patterns, and a refined output header (ROH) to reconstruct temporal and logical information in accordance with the scoring standard. Compared to other sleep staging solutions, we use local and global time embedding to achieve higher  performance.
 
@@ -85,12 +85,33 @@ python3 --model-list ['deepsleepnet'] main.py
 ```
 the model list can support BiLSTM ('bilstm'), EEG-Net ('eegnet') [1], DeepSleepNet ('deepsleepnet') [2], TinySleepNet ('tinysleepnet') [3], ResConv ('resconv'), InceptionTime ('inceptiontime') [4], Xception ('xception'), ConvLSTM ('convlstm'), UTime ('utime') [5], SalientSleepNet ('salientsleepnet') [6], and SeqSleepNet ('seqsleepnet') [7]. 
 
-## 参考
+# Citation
+If you use this code for your research, please cite our paper:
+```bib
+@ARTICLE{10839009,
+  author={Liu, Ruhan and Li, Jiajia and Wen, Yang and Huang, Xian and Sheng, Bin and Feng, David Dagan and Zhang, Ping},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={MHFNet: A Multimodal Hybrid-Embedding Fusion Network for Automatic Sleep Staging}, 
+  year={2025},
+  volume={29},
+  number={5},
+  pages={3387-3397},
+  keywords={Sleep;Brain modeling;Transformers;Feature extraction;Hidden Markov models;Time series analysis;Electroencephalography;Logic gates;Electrooculography;Correlation;Sleep staging;multimodal fusion;position embedding;transformer-based attention},
+  doi={10.1109/JBHI.2025.3528444}
+}
+```
+## References
 
 - [1] [EEGNet: A Compact Convolutional Network for EEG-based Brain-Computer Interfaces](http://arxiv.org/abs/1611.08024)
 - [2] [DeepSleepNet: A Model for Automatic Sleep Stage Scoring Based on Raw Single-Channel EEG](https://ieeexplore.ieee.org/document/7961240)
-- [3] [TinySleepNet: An Efficient Deep Learning Model for Sleep Stage Scoring based on Raw Single-Channel EEG](https://doi.org/10.1109/EMBC44109.2020.9176741)
-- [4] [InceptionTime: Finding AlexNet for time series classification](https://doi.org/10.1007/s10618-020-00710-y)
+- [3] [TinySleepNet: An Efficient Deep Learning Model for Sleep Stage Scoring based on Raw Single-Channel EEG](https://doi.org/10.1109/EMBC44109.2020.9176741
+        
+        )
+- [4] [InceptionTime: Finding AlexNet for time series classification](https://doi.org/10.1007/s10618-020-00710-y
+        
+        )
 - [5] [U-Time: A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging](https://proceedings.neurips.cc/paper/2019/hash/57bafb2c2dfeefba931bb03a835b1fa9-Abstract.html)
-- [6] [SalientSleepNet: Multimodal Salient Wave Detection Network for Sleep Staging](https://doi.org/10.24963/ijcai.2021/360)
+- [6] [SalientSleepNet: Multimodal Salient Wave Detection Network for Sleep Staging](https://doi.org/10.24963/ijcai.2021/360
+        
+        )
 - [7] [SeqSleepNet: End-to-End Hierarchical Recurrent Neural Network for Sequence-to-Sequence Automatic Sleep Staging](https://ieeexplore.ieee.org/document/8631195)
